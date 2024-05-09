@@ -1,0 +1,12 @@
+.main-view {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(97, 97, 97); */
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}

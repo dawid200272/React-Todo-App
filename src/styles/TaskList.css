@@ -1,0 +1,24 @@
+.task-list {
+  /* border: 5px dashed grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  row-gap: 1rem;
+  width: max-content;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+h3 {
+  color:rgba(127, 255, 212, 0.553);
+  font-weight: bold;
+}
+
+ul {
+  list-style: decimal;
+}
+
+li {
+  color: rgba(0, 255, 255, 0.689);
+}
