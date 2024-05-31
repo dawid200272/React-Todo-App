@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "./state/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
+import "./index.scss";
 import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import MainView from "./components/MainView";

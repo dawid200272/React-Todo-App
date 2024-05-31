@@ -1,0 +1,54 @@
+@use "./components/todoCard" as *;
+@use "./components/todoHeader" as *;
+@use "./components/taskList" as *;
+
+input[type="checkbox"].done-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background: #bebebe;
+  border: 1px solid rgb(74, 74, 74);
+  accent-color: #82ed80;
+}
+
+.done-indicator {
+  .done {
+    background: #82ed80;
+  }
+
+  img {
+    width: 3rem;
+    display: none;
+  }
+}
+
+.done img {
+  display: inline;
+}
+
+h3 {
+  color: rgba(127, 255, 212, 0.553);
+  font-weight: bold;
+}
+
+ul {
+  list-style: decimal;
+}
+
+li {
+  color: rgba(0, 255, 255, 0.689);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

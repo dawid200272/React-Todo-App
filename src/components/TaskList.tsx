@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TaskList.css";
+import "../styles/TaskList.scss";
 import TodoTask from "./TodoTask";
 import { Space } from "antd";
 import { RootState } from "../state/store";

@@ -1,5 +1,5 @@
 import { Layout, Space } from "antd";
-import "./App.css";
+import "./App.scss";
 import MainView from "./components/MainView";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";

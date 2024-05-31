@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TaskList from "./TaskList";
 import FormButton from "./FormButton";
-import "../styles/MainView.css";
+import "../styles/MainView.scss";
 import { Layout, Space, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../state/store";

@@ -1,0 +1,25 @@
+.todo-header {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  padding: 4px 8px;
+  width: 100%;
+
+  h4 {
+    color: black;
+    font-size: 18px;
+    font-family: "Inter";
+    font-weight: bold;
+    word-wrap: break-word;
+    text-transform: capitalize;
+  }
+
+  &.done {
+    text-decoration: line-through;
+
+    h4 {
+      font-weight: normal;
+    }
+  }
+}

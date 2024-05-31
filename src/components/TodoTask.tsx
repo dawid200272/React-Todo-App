@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TodoTask.css";
+import "../styles/TodoTask.scss";
 import Button from "./Button";
 import { Card } from "antd";
 import { deleteTodoAsync, updateTodoAsync } from "../state/todo/todoSlice";

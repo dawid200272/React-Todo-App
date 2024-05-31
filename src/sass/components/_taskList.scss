@@ -1,0 +1,11 @@
+.task-list {
+  /* border: 5px dashed grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  row-gap: 1rem;
+  width: max-content;
+  margin: auto;
+  padding: 10px 20px;
+}

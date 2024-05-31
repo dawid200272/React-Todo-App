@@ -1,0 +1,74 @@
+@use "../sass/abstracts/colors" as *;
+
+.todo-card {
+  background: $todo_color;
+  border-radius: 20px;
+  flex: none;
+  width: 100%;
+
+  &.done {
+    opacity: 70%;
+  }
+
+  &.daily {
+    background: $todo_daily_color;
+  }
+
+  p {
+    color: black;
+    font-size: 20px;
+    font-family: "Inter";
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+}
+
+.todo-header {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  padding: 4px 8px;
+  width: 100%;
+
+  h4 {
+    color: black;
+    font-size: 18px;
+    font-family: "Inter";
+    font-weight: bold;
+    word-wrap: break-word;
+    text-transform: capitalize;
+  }
+
+  &.done {
+    text-decoration: line-through;
+
+    h4 {
+      font-weight: normal;
+    }
+  }
+}
+
+input[type="checkbox"].done-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background: #bebebe;
+  border: 1px solid rgb(74, 74, 74);
+  accent-color: #82ed80;
+}
+
+.done-indicator {
+  &.done {
+    background: #82ed80;
+  }
+
+  img {
+    width: 3rem;
+    display: none;
+  }
+}
+
+.done img {
+  display: inline;
+}
