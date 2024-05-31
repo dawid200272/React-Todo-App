@@ -144,7 +144,7 @@ const MainView: React.FC = () => {
     dailyTask.forEach(async (todo) => {
       let todoToUpdate = Object.assign({}, todo);
 
-      todoToUpdate.isDone = !todo.isDone;
+      todoToUpdate.isDone = false;
 
       // todo.isDone = false;
 
