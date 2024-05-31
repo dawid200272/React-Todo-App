@@ -7,7 +7,7 @@ const instance = axios.create({
   baseURL: `http://${apiHost}:${apiPort}/api`,
 });
 
-const fetchTodos = async () => {
+const fetchTodos = async (): Promise<Array<Todo>> => {
   try {
     var response = await instance.get("/todos");
     return response.data;
@@ -17,7 +17,7 @@ const fetchTodos = async () => {
   }
 };
 
-const createTodo = async (todo) => {
+const createTodo = async (todo: Todo): Promise<Todo> => {
   try {
     var response = await instance.post("/todos", todo);
     return response.data;
@@ -27,7 +27,7 @@ const createTodo = async (todo) => {
   }
 };
 
-const updateTodo = async (todo) => {
+const updateTodo = async (todo: Todo): Promise<Todo> => {
   try {
     var response = await instance.put(`/todos/${todo._id}`, todo);
     return response.data;
@@ -37,7 +37,7 @@ const updateTodo = async (todo) => {
   }
 };
 
-const deleteTodo = async (todo) => {
+const deleteTodo = async (todo: Todo): Promise<Todo> => {
   try {
     var response = await instance.delete(`/todos/${todo._id}`);
     return response.data;
