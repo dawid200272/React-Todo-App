@@ -3,8 +3,8 @@ import "../styles/TodoTask.scss";
 import Button from "./Button";
 import { Card } from "antd";
 import { deleteTodoAsync, updateTodoAsync } from "../state/todo/todoSlice";
-import { AppDispatch, RootState } from "../state/store";
-import { connect, useSelector } from "react-redux";
+import { AppDispatch } from "../state/store";
+import { connect } from "react-redux";
 
 interface TodoAction {
   (todo: Todo): void;
@@ -21,10 +21,6 @@ const TodoTask: React.FC<TodoTaskProps> = ({
   toggleAction,
   deleteAction,
 }) => {
-  // const currentTodo = useSelector(
-  //   (state: RootState) => state.todoSlice.todos
-  // ).filter((todo) => todo._id === todo._id)[0];
-
   const handleToogle = () => {
     let todoToUpdate = Object.assign({}, todo);
 

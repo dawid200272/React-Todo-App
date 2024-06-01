@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import React from "react";
+import { Button, Checkbox, Form, Input } from "antd";
 
-function FormButton({buttonName, action, textColor}) {
+function FormButton({ buttonName, action, textColor }) {
   const [form] = Form.useForm();
 
   function runAction(values) {
-
-    let type = 'one-time';
+    let type = "one-time";
 
     if (values.isDaily) {
-      type = 'daily'
+      type = "daily";
     }
 
     action(values.todo, type);
@@ -20,14 +19,10 @@ function FormButton({buttonName, action, textColor}) {
   }
 
   return (
-    <Form
-      layout='inline'
-      form={form}
-      onFinish={runAction}
-    >
+    <Form layout="inline" form={form} onFinish={runAction}>
       <Form.Item
-        label='Todo'
-        name='todo'
+        label="Todo"
+        name="todo"
         rules={[
           {
             required: true,
@@ -40,21 +35,23 @@ function FormButton({buttonName, action, textColor}) {
 
       <Form.Item
         label={<label style={{ color: textColor }}>Is daily</label>}
-        name='isDaily'
-        valuePropName='checked'
+        name="isDaily"
+        valuePropName="checked"
       >
         <Checkbox
           style={{
-            color: textColor
+            color: textColor,
           }}
         />
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit">{buttonName}</Button>
+        <Button type="primary" htmlType="submit">
+          {buttonName}
+        </Button>
       </Form.Item>
     </Form>
   );
 }
 
-export default FormButton
+export default FormButton;

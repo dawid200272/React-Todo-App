@@ -1,10 +1,9 @@
 import { Layout, Space } from "antd";
 import "./App.scss";
-import MainView from "./components/MainView";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
-const { Header, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 
 const layoutStyle = { display: "flex" };
 
@@ -34,7 +33,7 @@ const contentStyle = { padding: "0 48px", minHeight: "100vh" };
 function App() {
   return (
     <Layout style={layoutStyle} className="App">
-      <Sider width="15%">
+      <Sider width="15%" style={siderStyle}>
         <Space
           direction="vertical"
           className="options"
@@ -50,15 +49,6 @@ function App() {
               {page.name}
             </NavLink>
           ))}
-          {/* <NavLink
-            to={"/"}
-            style={({ isActive }) => {
-              return isActive ? { color: "white" } : {};
-            }}
-          >
-            Home
-          </NavLink>
-          <NavLink to={"/about"}>About Page</NavLink> */}
         </Space>
       </Sider>
       <Layout>
@@ -67,9 +57,6 @@ function App() {
         </Content>
       </Layout>
     </Layout>
-    // <div className="App">
-    //   <MainView />
-    // </div>
   );
 }
 
